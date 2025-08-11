@@ -16,8 +16,8 @@
 
 ### Need to Know Before Starting to Build
 
-- Which Astro starter/template to use (minimal, blog, or custom)
-- Initial controlled topic list (define your starting topics)
+- [x] Which Astro starter/template to use: **Minimal custom setup, start with minimal styling and a little Bootstrap for CSS. Add styling/layouts gradually.**
+- [x] Initial controlled topic list: **Technology, Music, Tarot, Craft, Life**
 
 ### Decisions for Later
 
@@ -49,7 +49,7 @@
 
 ## 🛠️ Initial Setup Tasks
 
-- [ ] Install Node.js (LTS v18+)
+- [x] Install Node.js (LTS v18+)
 - [ ] Run `npm create astro@latest` to scaffold base project (with TypeScript)
 - [ ] Choose blog starter (or minimal + markdown)
 - [ ] Install and configure:
