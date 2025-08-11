@@ -12,6 +12,22 @@
 
 ---
 
+## ❓ Decisions To Make
+
+### Need to Know Before Starting to Build
+
+- Which Astro starter/template to use (minimal, blog, or custom)
+- Initial controlled topic list (define your starting topics)
+
+### Decisions for Later
+
+- Email provider: Buttondown or ConvertKit
+- Commenting system: Commento, Giscus, or custom
+- Hosting provider: Netlify, Vercel, or Cloudflare Pages
+- When to add analytics and which provider to choose
+
+---
+
 ## 🗂️ Project Structure
 
 ```
@@ -163,6 +179,8 @@
 ## 🔗 Useful Links
 - Astro Docs: https://docs.astro.build/
 - RSS Plugin: https://docs.astro.build/en/guides/rss/
-- Buttondown API: https://buttondown.email/api
-- Commento: https://commento.io / https://gitlab.com/commento/commentoplusplus
 - MDX Support: https://docs.astro.build/en/guides/integrations-guide/mdx/
+- Buttondown API: https://docs.buttondown.com
+- Commento:
+    - https://commento.io
+    - https://github.com/souramoo/commentoplusplus
