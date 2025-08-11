@@ -50,8 +50,8 @@
 ## 🛠️ Initial Setup Tasks
 
 - [x] Install Node.js (LTS v18+)
-- [ ] Run `npm create astro@latest` to scaffold base project (with TypeScript)
-- [ ] Choose blog starter (or minimal + markdown)
+- [x] Run `npm create astro@latest` to scaffold base project (with TypeScript)
+- [x] Choose blog starter (or minimal + markdown)
 - [ ] Install and configure:
     - [ ] Markdown/MDX support
     - [ ] Tailwind CSS (custom CSS can be added later)
