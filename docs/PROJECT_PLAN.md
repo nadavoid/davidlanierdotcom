@@ -53,10 +53,10 @@
 - [x] Run `npm create astro@latest` to scaffold base project (with TypeScript)
 - [x] Choose blog starter (or minimal + markdown)
 - [ ] Install and configure:
-    - [ ] Markdown/MDX support
-    - [x] Tailwind CSS (custom CSS can be added later)
-    - [ ] RSS plugin (`@astrojs/rss`)
-    - [ ] Syntax highlighting (Shiki or Prism)
+  - [ ] Markdown/MDX support
+  - [x] Tailwind CSS (custom CSS can be added later)
+  - [ ] RSS plugin (`@astrojs/rss`)
+  - [ ] Syntax highlighting (Shiki or Prism)
 - [x] Set basic page layout, spacing, typography, global styles
 - [ ] Add favicon/logo/branding
 
@@ -76,20 +76,20 @@
   ---
 ```
 - Topics used for:
-    - Filtering views (`/topic/tech`)
-    - Generating topic-specific RSS feeds
-    - Email segmentation (future)
-    - Controlled list, updated as needed
+  - Filtering views (`/topic/tech`)
+  - Generating topic-specific RSS feeds
+  - Email segmentation (future)
+  - Controlled list, updated as needed
 - Site Navigation
-    - Main nav at top
-        - Home
-        - Thoughts & Ramblings (This is my blog)
-        - Contact
-    - Thoughts & Ramblings subnav (displayed horizontally, below main nav)
-        - Technology
-        - Music
-        - Tarot
-        - ... other topics
+  - Main nav at top
+    - Home
+    - Thoughts & Ramblings (This is my blog)
+    - Contact
+  - Thoughts & Ramblings subnav (displayed horizontally, below main nav)
+    - Technology
+    - Music
+    - Tarot
+    - ... other topics
 ---
 
 ## 📡 RSS Feeds
@@ -103,12 +103,11 @@
 **Tool:** [Buttondown](https://buttondown.email) or [ConvertKit](https://convertkit.com)
 
 - [ ]  Add email signup forms
-    - [ ]  Global signup (all posts)
-    - [ ]  Topic-specific (via custom fields)
+  - [ ]  Global signup (all posts)
+  - [ ]  Topic-specific (via custom fields)
 - [ ]  Configure RSS-to-email automations
 - [ ]  Enable instant and weekly options
 - [ ]  Add unsubscribe/update profile links
-    
 
 ---
 
@@ -134,8 +133,8 @@
 - [ ]  Use **MediaRecorder API** to capture audio
 - [ ]  Allow users to preview + upload
 - [ ]  Submit via fetch to:
-    - [ ]  Serverless API (e.g., Vercel Function)
-    - [ ]  Cloud storage (e.g., S3, R2)
+  - [ ]  Serverless API (e.g., Vercel Function)
+  - [ ]  Cloud storage (e.g., S3, R2)
 - [ ]  Notify site owner of new message (optional)
 - [ ]  Show playback UI for approved messages
 
@@ -145,9 +144,9 @@
 - [ ]  Local development (`npm run dev`)
 - [ ]  GitHub (optional, not required)
 - [ ]  Deploy to:
-    - [ ]  Netlify (free tier)
-    - [ ]  Vercel (free tier)
-    - [ ]  Cloudflare Pages
+  - [ ]  Netlify (free tier)
+  - [ ]  Vercel (free tier)
+  - [ ]  Cloudflare Pages
 - [ ]  Set up custom domain + HTTPS
 
 ---
@@ -177,7 +176,7 @@
 -  Monitor email delivery (Buttondown/SMTP)
 -  Rotate backups if using local storage
 -  Check site performance periodically (Lighthouse)
-    
+
 ---
 
 ## 📊 Analytics (Future)
@@ -192,5 +191,5 @@
 - MDX Support: https://docs.astro.build/en/guides/integrations-guide/mdx/
 - Buttondown API: https://docs.buttondown.com
 - Commento:
-    - https://commento.io
-    - https://github.com/souramoo/commentoplusplus
+  - https://commento.io
+  - https://github.com/souramoo/commentoplusplus
