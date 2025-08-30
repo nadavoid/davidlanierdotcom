@@ -54,9 +54,10 @@
 - [x] Choose blog starter (or minimal + markdown)
 - [ ] Install and configure:
     - [ ] Markdown/MDX support
-    - [ ] Tailwind CSS (custom CSS can be added later)
+    - [x] Tailwind CSS (custom CSS can be added later)
     - [ ] RSS plugin (`@astrojs/rss`)
     - [ ] Syntax highlighting (Shiki or Prism)
+- [x] Set basic page layout, spacing, typography, global styles
 - [ ] Add favicon/logo/branding
 
 ---
@@ -70,7 +71,7 @@
   title: "Example Post"
   description: "Short summary for metadata and RSS"
   pubDate: "2025-08-01"
-  topics: ["tech", "astro"] # Controlled list
+  topics: ["technology", "music"] # Controlled list
   draft: false
   ---
 ```
@@ -79,7 +80,16 @@
     - Generating topic-specific RSS feeds
     - Email segmentation (future)
     - Controlled list, updated as needed
-
+- Site Navigation
+    - Main nav at top
+        - Home
+        - Thoughts & Ramblings (This is my blog)
+        - Contact
+    - Thoughts & Ramblings subnav (displayed horizontally, below main nav)
+        - Technology
+        - Music
+        - Tarot
+        - ... other topics
 ---
 
 ## 📡 RSS Feeds
