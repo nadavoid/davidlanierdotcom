@@ -8,11 +8,6 @@
 
 @theme {
   --max-w-prose: 70ch;
-  --color-test: red;
-}
-
-.test {
-  color: var(--color-test);
 }
 
 /* Typography plugin replacement */
