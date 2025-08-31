@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/*
+  Using @plugin for now.
+  The package has not been upgraded to work as an @import yet.
+*/
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --max-w-prose: 70ch;
+  --color-test: red;
+}
+
+.test {
+  color: var(--color-test);
+}
+
+/* Typography plugin replacement */
+.prose {
+  max-width: var(--max-w-prose);
+  --tw-prose-body: inherit;
+  --tw-prose-headings: inherit;
+  --tw-prose-links: inherit;
+  --tw-prose-code: inherit;
+  --tw-prose-quotes: inherit;
+}
