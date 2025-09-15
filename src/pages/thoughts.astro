@@ -1,8 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const postImports = import.meta.glob('../content/thoughts/*/*/*/index.md');
+const posts = await Promise.all(
+	Object.entries(postImports).map(async ([path, resolver]) => {
+		type PostFrontmatter = {
+      title: string;
+      date: string;
+	    topics: string[];
+      summary: string;
+      [key: string]: any;
+    };
+
+	const post = await resolver() as { frontmatter: PostFrontmatter };
+	const parts = path.split('/');
+	const yyyy = parts[3];
+	const mm = parts[4];
+	const thought = parts[5];
+	return {
+		...post.frontmatter,
+		url: `/thoughts/${yyyy}/${mm}/${thought}`,
+	};
+	})
+);
 ---
 
 <BaseLayout title="Thoughts">
 	<h1>Thoughts</h1>
-  <p>This is where I will share my thoughts on various topics.</p>
+	<p>Here are my latest thoughts and musings:</p>
+	<ul>
+		{posts.length === 0 ? (
+			<li>No posts yet. Check back soon!</li>
+		) : (
+			posts.map(post => (
+				<li>
+					<a href={post.url}><strong>{post.title}</strong></a><br />
+					  <small>{post.date} &mdash; {post.topics.join(', ')}</small><br />
+					<span>{post.summary}</span>
+				</li>
+			))
+		)}
+	</ul>
 </BaseLayout>

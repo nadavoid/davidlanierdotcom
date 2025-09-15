@@ -59,6 +59,14 @@
   - [ ] Syntax highlighting (Shiki or Prism)
 - [x] Set basic page layout, spacing, typography, global styles
 - [ ] Add favicon/logo/branding
+- [ ] Add content
+  - [ ] Home page
+  - [ ] Musings page
+  - [ ] Add two posts from old site
+  - [ ] Add the rest of the content from the old site
+  - [ ] Add new content
+- [ ] Design updates
+  - [ ] More interesting typography
 
 ---
 
