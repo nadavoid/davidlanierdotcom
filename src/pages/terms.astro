@@ -1,0 +1,15 @@
+
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLicenseText, getContentLicenseHtml } from '../utils/license';
+
+const licenseText = await getLicenseText();
+const contentLicenseHtml = await getContentLicenseHtml();
+---
+
+<BaseLayout title="Copyright and License">
+  <h1>Copyright and License</h1>
+  <p>The source code of this web site is provided publicly as open source software, for use as inspiration or a starting point for other sites. <a href="https://github.com/nadavoid/davidlanierdotcom">https://github.com/nadavoid/davidlanierdotcom</a></p>
+  <pre>{licenseText}</pre>
+  <div set:html={contentLicenseHtml}></div>
+</BaseLayout>

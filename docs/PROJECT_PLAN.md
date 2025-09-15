@@ -56,9 +56,9 @@
   - [x] Tailwind CSS (custom CSS can be added later)
 - [x] Set basic page layout, spacing, typography, global styles
 - [ ] Add content
-  - [ ] Home page: basic about, contact info, link to thoughts
-  - [ ] Thoughts page
-  - [ ] Add two posts from old site
+  - [x] Home page: basic about, contact info, link to thoughts
+  - [x] Thoughts page
+  - [x] Add two posts from old site
   - [ ] One new introductory post
 - [ ] Archive content from old site
 - [ ] Update DNS - web only

@@ -4,7 +4,9 @@ const pathname = new URL(Astro.request.url).pathname;
 function getNavClass(href: string) {
   return [
     "whitespace-nowrap hover:opacity-80 transition-opacity px-2 py-2",
-    pathname === href ? "bg-gray-100 dark:bg-gray-800 rounded" : ""
+    href === "/"
+      ? pathname === "/" ? "bg-gray-100 dark:bg-gray-800 rounded" : ""
+      : pathname.startsWith(href) ? "bg-gray-100 dark:bg-gray-800 rounded" : ""
   ];
 }
 import "../styles/tailwind.css";
@@ -49,7 +51,7 @@ import "../styles/tailwind.css";
     </main>
 
     <footer class="py-4 px-6 text-center text-sm text-gray-600 dark:text-gray-400">
-      <p>&copy; {new Date().getFullYear()} David Lanier. <a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy Policy</a></p>
+      <p><a href="/terms" class="hover:opacity-80 transition-opacity">&copy; {new Date().getFullYear()} David Lanier</a></p>
     </footer>
   </body>
 </html>
