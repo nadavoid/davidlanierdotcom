@@ -52,7 +52,7 @@
 - [x] Install Node.js (LTS v18+)
 - [x] Run `npm create astro@latest` to scaffold base project (with TypeScript)
 - [x] Choose blog starter (or minimal + markdown)
-- [ ] Install and configure:
+- [x] Install and configure:
   - [x] Tailwind CSS (custom CSS can be added later)
 - [x] Set basic page layout, spacing, typography, global styles
 - [ ] Add content
@@ -60,7 +60,8 @@
   - [ ] Thoughts page
   - [ ] Add two posts from old site
   - [ ] One new introductory post
-
+- [ ] Archive content from old site
+- [ ] Update DNS - web only
 ## Fast follows
 - [ ] RSS plugin (`@astrojs/rss`)
 - [ ] Add contact form

@@ -1,54 +1,57 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const postImports = import.meta.glob('../content/thoughts/*/*/*/index.md');
-const posts = await Promise.all(
-	Object.entries(postImports).map(async ([path, resolver]) => {
-		type PostFrontmatter = {
-      title: string;
-      date: string;
-	    topics: string[];
-      summary: string;
-      [key: string]: any;
-    };
+// Support both .md and .mdx files
+const postImports = import.meta.glob('../content/thoughts/*/*/*/index.{md,mdx}');
+const posts = (
+  await Promise.all(
+    Object.entries(postImports).map(async ([path, resolver]) => {
+      type PostFrontmatter = {
+        title: string;
+        date: string;
+        topics: string[];
+        summary: string;
+        [key: string]: any;
+      };
 
-	const post = await resolver() as { frontmatter: PostFrontmatter };
-	const parts = path.split('/');
-	const yyyy = parts[3];
-	const mm = parts[4];
-	const thought = parts[5];
-	return {
-		...post.frontmatter,
-		url: `/thoughts/${yyyy}/${mm}/${thought}`,
-	};
-	})
-);
+      const post = await resolver() as { frontmatter: PostFrontmatter };
+      const parts = path.split('/');
+      const yyyy = parts[3];
+      const mm = parts[4];
+      const thought = parts[5];
+      return {
+        ...post.frontmatter,
+        url: `/thoughts/${yyyy}/${mm}/${thought}`,
+      };
+    })
+  )
+).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <BaseLayout title="Thoughts">
-	<h1>My Thoughts</h1>
-	<p>Here are all of my recent thoughts and musings on music, technology, and more.</p>
-	<ul class="list-none p-0 m-0">
-		{posts.length === 0 ? (
-			<li>No posts yet. Check back soon!</li>
-		) : (
-			posts.map(post => (
-				<li class="px-0 mb-4 border-b border-gray-300 pb-4">
-					<div><a href={post.url}><strong>{post.title}</strong></a></div>
-					<div>{post.summary}</div>
-					<div>
-						<small>
-							{new Date(post.date).toLocaleDateString('en-US', {
-								weekday: 'long',
-								year: 'numeric',
-								month: 'long',
-								day: 'numeric'
-							})}
-							&mdash; {post.topics.join(', ')}
-						</small>
-					</div>
-				</li>
-			))
-		)}
-	</ul>
+  <h1>My Thoughts</h1>
+  <p>Here are all of my recent thoughts and musings on music, technology, and more.</p>
+  <ul class="list-none p-0 m-0">
+    {posts.length === 0 ? (
+      <li>No posts yet. Check back soon!</li>
+    ) : (
+      posts.map(post => (
+        <li class="px-0 mb-4 border-b border-gray-300 pb-4">
+          <div><a href={post.url}><strong>{post.title}</strong></a></div>
+          <div>{post.summary}</div>
+          <div>
+            <small>
+              {new Date(post.date).toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+              &mdash; {post.topics.join(', ')}
+            </small>
+          </div>
+        </li>
+      ))
+    )}
+  </ul>
 </BaseLayout>

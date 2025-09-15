@@ -3,7 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 // Generate all available slugs
 export async function getStaticPaths() {
-  const postImports = import.meta.glob('../../content/thoughts/*/*/*/index.md');
+  // Support both .md and .mdx files
+  const postImports = import.meta.glob('../../content/thoughts/*/*/*/index.{md,mdx}');
   const paths = Object.keys(postImports).map((path) => {
     const parts = path.split('/');
     const yyyy = parts[4];
@@ -17,9 +18,13 @@ export async function getStaticPaths() {
 // Get the slug for this page
 const { thought } = Astro.params;
 
-// Import the correct post dynamically
-const postImports = import.meta.glob('../../content/thoughts/*/*/*/index.md');
-const postImport = postImports[`../../content/thoughts/${thought}/index.md`];
+// Support both .md and .mdx files
+const postImports = import.meta.glob('../../content/thoughts/*/*/*/index.{md,mdx}');
+
+// Try to resolve .mdx first, then .md
+const mdxPath = `../../content/thoughts/${thought}/index.mdx`;
+const mdPath = `../../content/thoughts/${thought}/index.md`;
+const postImport = postImports[mdxPath] || postImports[mdPath];
 
 if (!postImport) {
   throw new Error(`Post not found: ${thought}`);
