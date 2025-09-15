@@ -53,20 +53,24 @@
 - [x] Run `npm create astro@latest` to scaffold base project (with TypeScript)
 - [x] Choose blog starter (or minimal + markdown)
 - [ ] Install and configure:
-  - [ ] Markdown/MDX support
   - [x] Tailwind CSS (custom CSS can be added later)
-  - [ ] RSS plugin (`@astrojs/rss`)
-  - [ ] Syntax highlighting (Shiki or Prism)
 - [x] Set basic page layout, spacing, typography, global styles
-- [ ] Add favicon/logo/branding
 - [ ] Add content
-  - [ ] Home page
-  - [ ] Musings page
+  - [ ] Home page: basic about, contact info, link to thoughts
+  - [ ] Thoughts page
   - [ ] Add two posts from old site
-  - [ ] Add the rest of the content from the old site
-  - [ ] Add new content
-- [ ] Design updates
-  - [ ] More interesting typography
+  - [ ] One new introductory post
+
+## Fast follows
+- [ ] RSS plugin (`@astrojs/rss`)
+- [ ] Add contact form
+- [ ] Add favicon/logo/branding
+- [ ] Add descriptions to menu items
+- [ ] Add the rest of the content from the old site
+- [ ] Add new content
+- [ ] More interesting typography
+- [ ] Syntax highlighting (Shiki or Prism)
+- [ ] MDX support
 
 ---
 
@@ -91,9 +95,9 @@
 - Site Navigation
   - Main nav at top
     - Home
-    - Thoughts & Ramblings (This is my blog)
+    - Thoughts & Musings (This is my blog)
     - Contact
-  - Thoughts & Ramblings subnav (displayed horizontally, below main nav)
+  - Thoughts & Musings subnav (displayed horizontally, below main nav)
     - Technology
     - Music
     - Tarot
@@ -101,21 +105,21 @@
 ---
 
 ## 📡 RSS Feeds
-- [ ]  Site-wide RSS (`/rss.xml`) with full post content
-- [ ]  Topic-based feeds (`/topics/[topic]/rss.xml`)
-- [ ]  Include post metadata in feed (title, link, summary, pubDate)
+- [ ] Site-wide RSS (`/rss.xml`) with full post content
+- [ ] Topic-based feeds (`/topics/[topic]/rss.xml`)
+- [ ] Include post metadata in feed (title, link, summary, pubDate)
 
 ---
 ## 📬 Email Subscriptions (Phase 2)
 
 **Tool:** [Buttondown](https://buttondown.email) or [ConvertKit](https://convertkit.com)
 
-- [ ]  Add email signup forms
-  - [ ]  Global signup (all posts)
-  - [ ]  Topic-specific (via custom fields)
-- [ ]  Configure RSS-to-email automations
-- [ ]  Enable instant and weekly options
-- [ ]  Add unsubscribe/update profile links
+- [ ] Add email signup forms
+  - [ ] Global signup (all posts)
+  - [ ] Topic-specific (via custom fields)
+- [ ] Configure RSS-to-email automations
+- [ ] Enable instant and weekly options
+- [ ] Add unsubscribe/update profile links
 
 ---
 
@@ -138,33 +142,33 @@
 ---
 
 ## 🎙️ Voice Message Feature (Phase 3)
-- [ ]  Use **MediaRecorder API** to capture audio
-- [ ]  Allow users to preview + upload
-- [ ]  Submit via fetch to:
-  - [ ]  Serverless API (e.g., Vercel Function)
-  - [ ]  Cloud storage (e.g., S3, R2)
-- [ ]  Notify site owner of new message (optional)
-- [ ]  Show playback UI for approved messages
+- [ ] Use **MediaRecorder API** to capture audio
+- [ ] Allow users to preview + upload
+- [ ] Submit via fetch to:
+  - [ ] Serverless API (e.g., Vercel Function)
+  - [ ] Cloud storage (e.g., S3, R2)
+- [ ] Notify site owner of new message (optional)
+- [ ] Show playback UI for approved messages
 
 ---
 
 ## 🌐 Hosting Options
-- [ ]  Local development (`npm run dev`)
-- [ ]  GitHub (optional, not required)
-- [ ]  Deploy to:
-  - [ ]  Netlify (free tier)
-  - [ ]  Vercel (free tier)
-  - [ ]  Cloudflare Pages
-- [ ]  Set up custom domain + HTTPS
+- [ ] Local development (`npm run dev`)
+- [ ] GitHub (optional, not required)
+- [ ] Deploy to:
+  - [ ] Netlify (free tier)
+  - [ ] Vercel (free tier)
+  - [ ] Cloudflare Pages
+- [ ] Set up custom domain + HTTPS
 
 ---
 
 ## ✨ Future Developer Showcases
-- [ ]  Add interactive demos (e.g., React/Vue/Svelte islands)
-- [ ]  Embed widgets in MDX posts
-- [ ]  Use animation or WebGL in project posts
-- [ ]  Add portfolio or `/lab` section
-- [ ]  Build and style custom 404 page
+- [ ] Add interactive demos (e.g., React/Vue/Svelte islands)
+- [ ] Embed widgets in MDX posts
+- [ ] Use animation or WebGL in project posts
+- [ ] Add portfolio or `/lab` section
+- [ ] Build and style custom 404 page
 
 ---
 

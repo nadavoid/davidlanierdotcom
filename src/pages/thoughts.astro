@@ -26,17 +26,27 @@ const posts = await Promise.all(
 ---
 
 <BaseLayout title="Thoughts">
-	<h1>Thoughts</h1>
-	<p>Here are my latest thoughts and musings:</p>
-	<ul>
+	<h1>My Thoughts</h1>
+	<p>Here are all of my recent thoughts and musings on music, technology, and more.</p>
+	<ul class="list-none p-0 m-0">
 		{posts.length === 0 ? (
 			<li>No posts yet. Check back soon!</li>
 		) : (
 			posts.map(post => (
-				<li>
-					<a href={post.url}><strong>{post.title}</strong></a><br />
-					  <small>{post.date} &mdash; {post.topics.join(', ')}</small><br />
-					<span>{post.summary}</span>
+				<li class="px-0 mb-4 border-b border-gray-300 pb-4">
+					<div><a href={post.url}><strong>{post.title}</strong></a></div>
+					<div>{post.summary}</div>
+					<div>
+						<small>
+							{new Date(post.date).toLocaleDateString('en-US', {
+								weekday: 'long',
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+							&mdash; {post.topics.join(', ')}
+						</small>
+					</div>
 				</li>
 			))
 		)}

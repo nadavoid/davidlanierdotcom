@@ -11,13 +11,11 @@ export async function getStaticPaths() {
     const slug = parts[6];
     return { params: { thought: `${yyyy}/${mm}/${slug}` } };
   });
-  console.log('getStaticPaths returned:', paths);
   return paths;
 }
 
 // Get the slug for this page
 const { thought } = Astro.params;
-console.log('THOUGHT:', thought);
 
 // Import the correct post dynamically
 const postImports = import.meta.glob('../../content/thoughts/*/*/*/index.md');
@@ -28,7 +26,7 @@ if (!postImport) {
 }
 
 // Resolve the post module
-const post = await postImport();
+const post = await postImport() as { frontmatter: any; Content: any };
 const { frontmatter, Content } = post;
 ---
 
