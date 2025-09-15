@@ -1,5 +1,7 @@
 ---
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatPostDate } from '../../utils/formatDate';
 
 // Generate all available slugs
 export async function getStaticPaths() {
@@ -38,9 +40,9 @@ const { frontmatter, Content } = post;
 <BaseLayout title={frontmatter.title}>
   <article class="prose">
     <h1>{frontmatter.title}</h1>
-    {frontmatter.date && <time datetime={frontmatter.date}>{frontmatter.date}</time>}
+    {frontmatter.date && <time datetime={frontmatter.date}>{formatPostDate(frontmatter.date)}</time>}
     {frontmatter.date && frontmatter.topics && <span> &mdash; </span>}
-    {frontmatter.topics && <em>{frontmatter.topics.join(', ')}</em>}
+    {frontmatter.topics && frontmatter.topics.join(', ')}
     <Content />
   </article>
 </BaseLayout>

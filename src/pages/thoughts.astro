@@ -1,5 +1,7 @@
 ---
+
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatPostDate } from '../utils/formatDate';
 
 // Support both .md and .mdx files
 const postImports = import.meta.glob('../content/thoughts/*/*/*/index.{md,mdx}');
@@ -41,12 +43,7 @@ const posts = (
           <div>{post.summary}</div>
           <div>
             <small>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
+              {formatPostDate(post.date)}
               &mdash; {post.topics.join(', ')}
             </small>
           </div>
