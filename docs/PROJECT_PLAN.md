@@ -60,6 +60,8 @@
   - [x] Thoughts page
   - [x] Add two posts from old site
   - [ ] One new introductory post
+- [x] MDX support
+- [x] Decide on initial host for new site
 - [ ] Archive content from old site
 - [ ] Update DNS - web only
 ## Fast follows
@@ -71,7 +73,6 @@
 - [ ] Add new content
 - [ ] More interesting typography
 - [ ] Syntax highlighting (Shiki or Prism)
-- [ ] MDX support
 
 ---
 
@@ -154,8 +155,8 @@
 ---
 
 ## 🌐 Hosting Options
-- [ ] Local development (`npm run dev`)
-- [ ] GitHub (optional, not required)
+- [x] Local development (`npm run dev`)
+- [x] GitHub (optional, not required)
 - [ ] Deploy to:
   - [ ] Netlify (free tier)
   - [ ] Vercel (free tier)
