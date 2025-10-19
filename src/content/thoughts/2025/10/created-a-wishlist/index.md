@@ -1,7 +1,12 @@
 ---
-
+title: "My Wishlist"
+date: 2025-10-19
+topics:
+  - Life
+summary: "I selected a wishlist service and created a wishlist there."
 ---
-# I created a wishlist
+
+# My Wishlist
 
 Some people like to give me things. Weird. Well here are some things that would be nice to receive. https://www.thingstogetme.com/david-lanier
 
