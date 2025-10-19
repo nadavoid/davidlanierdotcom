@@ -6,8 +6,6 @@ topics:
 summary: "I selected a wishlist service and created a wishlist there."
 ---
 
-# My Wishlist
-
 Some people like to give me things. Weird. Well here are some things that would be nice to receive. https://www.thingstogetme.com/david-lanier
 
 On my previous site, I made my own little wishlist feature. It was literally just a list, grouped by category. On this iteration of my personal site, I'm aiming to outsource more, using third party services. The idea is that they'll do it better, and they'll take on keeping the underlying tech updated.
