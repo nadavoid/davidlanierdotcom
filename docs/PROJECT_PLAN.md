@@ -59,11 +59,11 @@
   - [x] Home page: basic about, contact info, link to thoughts
   - [x] Thoughts page
   - [x] Add two posts from old site
-  - [ ] One new introductory post
+  - [x] One new introductory post
 - [x] MDX support
 - [x] Decide on initial host for new site
-- [ ] Archive content from old site
-- [ ] Update DNS - web only
+- [x] Archive content from old site
+- [x] Update DNS - web only
 ## Fast follows
 - [ ] RSS plugin (`@astrojs/rss`)
 - [ ] Add contact form
@@ -108,7 +108,7 @@
 
 ## 📡 RSS Feeds
 - [ ] Site-wide RSS (`/rss.xml`) with full post content
-- [ ] Topic-based feeds (`/topics/[topic]/rss.xml`)
+- [ ] Topic-based feeds (`/rss/[topic].xml`)
 - [ ] Include post metadata in feed (title, link, summary, pubDate)
 
 ---
