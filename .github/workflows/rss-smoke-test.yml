@@ -1,0 +1,38 @@
+name: RSS smoke test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-check-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build site
+        run: npm run build --if-present
+
+      - name: Verify site-wide RSS exists and is valid
+        run: |
+          if [ ! -f dist/rss/thoughts.xml ]; then echo "dist/rss/thoughts.xml missing" && exit 1; fi
+          grep -q "<rss" dist/rss/thoughts.xml || (echo "dist/rss/thoughts.xml does not contain <rss" && exit 1)
+
+      - name: Verify topic RSS (music) exists and is valid
+        run: |
+          if [ ! -f dist/rss/thoughts/music.xml ]; then echo "dist/rss/thoughts/music.xml missing" && exit 1; fi
+          grep -q "<rss" dist/rss/thoughts/music.xml || (echo "dist/rss/thoughts/music.xml does not contain <rss" && exit 1)
+
+      - name: Success message
+        run: echo "RSS smoke tests passed."

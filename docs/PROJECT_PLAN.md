@@ -59,13 +59,13 @@
   - [x] Home page: basic about, contact info, link to thoughts
   - [x] Thoughts page
   - [x] Add two posts from old site
-  - [ ] One new introductory post
+  - [x] One new introductory post
 - [x] MDX support
 - [x] Decide on initial host for new site
-- [ ] Archive content from old site
-- [ ] Update DNS - web only
+- [x] Archive content from old site
+- [x] Update DNS - web only
 ## Fast follows
-- [ ] RSS plugin (`@astrojs/rss`)
+- [x] RSS plugin (`@astrojs/rss`) — installed
 - [ ] Add contact form
 - [ ] Add favicon/logo/branding
 - [ ] Add descriptions to menu items
@@ -107,9 +107,11 @@
 ---
 
 ## 📡 RSS Feeds
-- [ ] Site-wide RSS (`/rss.xml`) with full post content
-- [ ] Topic-based feeds (`/topics/[topic]/rss.xml`)
-- [ ] Include post metadata in feed (title, link, summary, pubDate)
+- [x] Site-wide RSS (`/rss/thoughts.xml`) with full post content
+- [x] Topic-based feeds (`/rss/thoughts/[topic].xml`)
+- [x] Include post metadata in feed (title, link, summary, pubDate)
+- [x] Implemented routes: `src/pages/rss/thoughts.xml.ts` and `src/pages/rss/thoughts/[topic].xml.ts`
+- [x] `site` configured in `astro.config.mjs` (defaults to `http://localhost:4321` for dev; set `SITE` env var to your production URL)`
 
 ---
 ## 📬 Email Subscriptions (Phase 2)
@@ -177,6 +179,8 @@
 ## 🧪 Test Plan
 -  Test responsive design (mobile/tablet/desktop)
 -  Test RSS feeds in Feedly/NetNewsWire
+- [x] Add RSS autodiscovery link to site head (`src/layouts/BaseLayout.astro`)
+- [x] Add CI smoke test workflow to validate RSS on build (`.github/workflows/rss-smoke-test.yml`)
 -  Test email subscription + delivery
 -  Test voice recording in major browsers
 -  Verify comment anti-spam measures
