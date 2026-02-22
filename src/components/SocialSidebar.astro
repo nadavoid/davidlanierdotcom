@@ -1,0 +1,31 @@
+---
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/davidlanier",
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@nadavoid",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/nadavoid",
+  },
+];
+---
+
+<aside class="pt-2 text-sm" style="flex: 1;">
+  <nav class="flex flex-col gap-4">
+    {socialLinks.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:opacity-80 transition-opacity"
+      >
+        {link.name}
+      </a>
+    ))}
+  </nav>
+</aside>

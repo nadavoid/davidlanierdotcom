@@ -10,6 +10,7 @@ function getNavClass(href: string) {
   ];
 }
 import "../styles/tailwind.css";
+import SocialSidebar from "../components/SocialSidebar.astro";
 ---
 
 <html lang="en">
@@ -45,11 +46,16 @@ import "../styles/tailwind.css";
       </div>
     </header>
 
-    <main class="flex-grow px-6 py-8">
-      <div class="prose dark:prose-invert max-w-prose mx-auto">
-        <slot />
+    <div class="flex-grow px-6 py-8">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-8">
+        <main class="min-w-0" style="flex: 7;">
+          <div class="prose dark:prose-invert">
+            <slot />
+          </div>
+        </main>
+        <SocialSidebar />
       </div>
-    </main>
+    </div>
 
     <footer class="py-4 px-6 text-center text-sm text-gray-600 dark:text-gray-400">
       <p><a href="/terms" class="hover:opacity-80 transition-opacity">&copy; {new Date().getFullYear()} David Lanier</a></p>
