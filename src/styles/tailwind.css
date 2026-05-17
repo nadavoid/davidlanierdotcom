@@ -19,7 +19,3 @@
   --tw-prose-code: inherit;
   --tw-prose-quotes: inherit;
 }
-
-.main-nav {
-  max-width: var(--max-w-prose);
-}
