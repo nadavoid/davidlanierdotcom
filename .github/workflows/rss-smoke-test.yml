@@ -13,16 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build site
-        run: npm run build --if-present
+        run: pnpm run build
 
       - name: Verify site-wide RSS exists and is valid
         run: |
